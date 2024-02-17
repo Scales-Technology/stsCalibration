@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-200 min-h-screen">
       <Navbar />
-      <main className="container mx-auto py-20 text-center mt-28">
+      <main className="container mx-auto py-20 text-center mt-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Link to="/new-client" className="bg-blue-200 rounded-lg p-6 block">
           <div >

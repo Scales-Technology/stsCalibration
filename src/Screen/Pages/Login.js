@@ -6,7 +6,7 @@ export default function Login() {
   return (
     <div className="bg-gray-300 min-h-screen">
       <Navbar />
-      <div className="flex justify-center items-center h-screen bg-gray-100">
+      <div className="flex justify-center items-center h-screen ">
         <div className="bg-white shadow-md rounded-lg p-6 w-96"> 
           <h1 className="text-2xl font-bold mb-4">Login</h1>
           <form>
