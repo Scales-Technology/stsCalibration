@@ -4,7 +4,7 @@ import Footer from '../Homepage/Footer';
 
 export default function Login() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-300 min-h-screen">
       <Navbar />
       <div className="flex justify-center items-center h-screen bg-gray-100">
         <div className="bg-white shadow-md rounded-lg p-6 w-96"> 
