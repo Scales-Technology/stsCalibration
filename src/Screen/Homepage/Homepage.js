@@ -1,33 +1,15 @@
 import React from 'react';
-// import Login from '../Pages/Login';
-import { NavLink } from 'react-router-dom';
+import Navbar from './Navbar.js';
+import Footer from './Footer.js';
 
 function HomePage() {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-white shadow-md">
-        <div className="container mx-auto py-4 px-6">
-          <nav className="flex justify-between items-center">
-            <h1 className="text-xl font-bold">Your Logo Here</h1>
-            < NavLink 
-            to="/login"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            activeClassName="bg-blue-700">
-            Login
-            </NavLink>
-          </nav>
-        </div>
-      </header>
-
-      <main className="container mx-auto py-6">
-        {/* Your main content goes here */}
+      <Navbar />
+      <main className="container mx-auto py-32 text-center mt-28"> 
+        <h1 className="font-bold text-2xl">ScalesTech Calibration Certs Generator</h1>
       </main>
-
-      <footer className="bg-gray-900 text-white py-4">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 ScalesTech. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
