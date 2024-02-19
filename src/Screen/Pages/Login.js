@@ -1,12 +1,22 @@
 import React from 'react';
-import Navbar from '../Homepage/Navbar';
+// import Navbar from '../Homepage/Navbar';
+import logo from '../../assets/STS logo.png';
 import Footer from '../Homepage/Footer';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
     <div className="bg-gray-300 min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
+      <header className="bg-white shadow-md fixed top-0 left-0 w-full z-10">
+        <div className="container mx-auto py-4 px-6">
+          <nav className="flex justify-between items-center">
+            <div className="flex items-center">
+              <img src={logo} alt="Logo" className="h-16 w-18 mr-4" />
+            </div>
+          </nav>
+        </div>
+      </header>
       <div className="flex justify-center items-center h-screen ">
         <div className="bg-white shadow-md rounded-lg p-6 w-96"> 
           <h1 className="text-2xl font-bold mb-4">Login</h1>
