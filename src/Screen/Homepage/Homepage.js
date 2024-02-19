@@ -15,16 +15,18 @@ function HomePage() {
             <p className="text-gray-700">Click Here to Input a new Client data.</p>
           </div>
           </Link>
-          <Link to="generate-certificate" className="bg-green-200 rounded-lg p-6">
+          <Link to="/new-scale" className="bg-green-200 rounded-lg p-6">
           <div >
             <h2 className="text-xl font-bold mb-4">Generate Certificate</h2>
             <p className="text-gray-700">Generate Calibration Certificate for registered Clients.</p>
           </div>
           </Link>
-          <div className="bg-yellow-200 rounded-lg p-6">
+          <Link to="/generate-certificate" className="bg-yellow-200 rounded-lg p-6">
+          <div >
             <h2 className="text-xl font-bold mb-4">View Certificates</h2>
             <p className="text-gray-700">View Generated Certificates.</p>
           </div>
+          </Link>
         </div>
       </main>
       <Footer />

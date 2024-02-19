@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Homepage/Navbar';
 import Footer from '../Homepage/Footer';
 
@@ -54,7 +55,9 @@ function NewScale() {
             <label htmlFor="certificateNumber" className="block text-sm font-medium text-gray-700">Certificate Number</label>
             <input type="text" id="certificateNumber" name="certificateNumber" value={formData.certificateNumber} onChange={handleChange} className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-blue-300" />
             </div>
-            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Submit</button>
+            <Link to="/eccentricity-test">
+            <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Next</button>
+            </Link>
         </form>
         </div>
         <Footer />
