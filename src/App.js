@@ -6,6 +6,8 @@ import NewClient from './Screen/Pages/Newclient';
 import NewScale from './Screen/Pages/NewScale';
 import GenerateCertificate from './Screen/Pages/GenerateCert';
 import EccentricityTest from './Screen/Pages/Eccentricity';
+import RepeatabilityTest from './Screen/Pages/Repeatability';
+import LinearityTest from './Screen/Pages/LinearityTest';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/new-scale" element={< NewScale />} />
         <Route path="/generate-certificate" element={< GenerateCertificate />} />
         <Route path="/eccentricity-test" element={< EccentricityTest />} />
+        <Route path="/repeatability-test" element={< RepeatabilityTest />} />
+        <Route path='/linearity-test' element={< LinearityTest />} />
         <Route path="*" element={< Navigate to=" /" />} />
       </Routes>
     </Router>
