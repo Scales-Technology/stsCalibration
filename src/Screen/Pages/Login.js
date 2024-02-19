@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Homepage/Navbar';
 import Footer from '../Homepage/Footer';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
@@ -33,12 +34,14 @@ export default function Login() {
               />
             </div>
             <div className="flex items-center justify-between">
+              <Link to="homepage">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
               >
                 Sign In
               </button>
+              </Link>
             </div>
           </form>
         </div>

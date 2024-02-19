@@ -11,11 +11,10 @@ function Navbar() {
             <img src={logo} alt="Logo" className="h-16 w-18 mr-4" />
           </Link>
           <Link 
-            to="/login"
+            to="/"
             className=" hover:bg-yellow-200 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            activeClassName="bg-blue-700"
           >
-            Login
+            Logout
           </Link>
         </nav>
       </div>
