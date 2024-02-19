@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Homepage/Navbar';
 import Footer from '../Homepage/Footer';
 
 function NewClient() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-300 min-h-screen">
       <Navbar />
       <main className="container mx-auto py-32">
         <div className="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
@@ -22,8 +23,13 @@ function NewClient() {
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone</label>
               <input type="tel" id="phone" name="phone" className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-blue-300" />
             </div>
+            <div className="mb-4">
+              <label htmlFor="address" className="block text-sm font-medium text-gray-700">Address</label>
+              <input type="text" id="address" name="address" className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-blue-300" />
+            </div>
             <div className="flex justify-end">
-              <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Register</button>
+            <Link to="/new-scale" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Next</Link>
+              {/* <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Register</button> */}
             </div>
           </form>
         </div>

@@ -1,12 +1,13 @@
 import React from 'react';
 import Navbar from '../Homepage/Navbar';
 import Footer from '../Homepage/Footer';
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   return (
     <div className="bg-gray-300 min-h-screen">
       <Navbar />
-      <div className="flex justify-center items-center h-screen bg-gray-100">
+      <div className="flex justify-center items-center h-screen ">
         <div className="bg-white shadow-md rounded-lg p-6 w-96"> 
           <h1 className="text-2xl font-bold mb-4">Login</h1>
           <form>
@@ -33,12 +34,14 @@ export default function Login() {
               />
             </div>
             <div className="flex items-center justify-between">
+              <Link to="homepage">
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="button"
               >
                 Sign In
               </button>
+              </Link>
             </div>
           </form>
         </div>
