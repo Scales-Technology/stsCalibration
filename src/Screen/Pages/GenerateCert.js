@@ -9,7 +9,7 @@ function GenerateCertificate() {
     const [certificateData, setCertificateData] = useState({
         requestedBy: 'Jerry Test',
         address: 'Scales Technologies',
-        equipment: 'PS6X Weighing Instrument',
+        equipment: 'PS6X Scale',
         typeModel: 'Model PS6X',
         serialNo: '123456',
         location: 'Scales Technologies',
@@ -24,16 +24,32 @@ function GenerateCertificate() {
         const dateParts = calibrationDate.split('/'); 
         const newDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]); 
         newDate.setFullYear(newDate.getFullYear() + 1); 
-        return newDate.toLocaleDateString(); 
+        return newDate.toLocaleDateString();
     };
 
+    // const handleDownload = () => {
+    //     const input = document.getElementById('certificate');
+    //     html2canvas(input)
+    //         .then((canvas) => {
+    //             const imgData = canvas.toDataURL('image/png');
+    //             const pdf = new jsPDF('portrait', 'mm', 'a4');
+    //             pdf.addImage(imgData, 'PNG', 0, 0, 210, 297); 
+    //             pdf.save('certificate.pdf');
+    //         });
+    // };
     const handleDownload = () => {
         const input = document.getElementById('certificate');
-        html2canvas(input)
+        const pdfWidth = 210; 
+        const pdfHeight = 297; 
+        const aspectRatio = pdfWidth / pdfHeight;
+        const width = input.offsetWidth;
+        const height = width / aspectRatio;
+    
+        html2canvas(input, { width, height })
             .then((canvas) => {
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF('portrait', 'mm', 'a4');
-                pdf.addImage(imgData, 'PNG', 0, 0, 210, 297); 
+                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
                 pdf.save('certificate.pdf');
             });
     };
@@ -43,12 +59,15 @@ function GenerateCertificate() {
             <Navbar />
             <div className="flex-grow p-32">
                 <button onClick={handleDownload} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Download Certificate</button>
-                <div id="certificate" className="w-full h-full border p-8 ">
+                {/* <div id="certificate" className="max-w-md mx-auto h-full border p-8 text-sm leading-normal"> */}
+                <div id="certificate" className="max-w-md mx-auto h-full border p-8 text-sm leading-normal">
+
                     <div className="flex justify-center items-center">
                         <img src={companyHeader} alt="header" />
                     </div>
 
-                    <h1 className="text-3xl text-center font-bold mb-4">CALIBRATION CERTIFICATE</h1>
+                    {/* <h1 className="text-3xl text-center font-bold mb-4">CALIBRATION CERTIFICATE</h1> */}
+                    <h1 className="text-xl font-bold mb-4">CALIBRATION CERTIFICATE</h1>
                     <div className="grid grid-cols-2 gap-x-2">
                         <div className="flex flex-col">
                             <p className="mb-1"><strong>REQUESTED BY</strong></p>
