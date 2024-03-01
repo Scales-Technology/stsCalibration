@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import Navbar from '../Homepage/Navbar';
 import Footer from '../Homepage/Footer';
 
@@ -11,7 +10,7 @@ function NewScale() {
     manufacturer: '',
     lab: 'Mass',
     date: '',
-    certificateNumber: ''
+    certificateNumber: '',
   });
 
   const handleChange = (e) => {
@@ -19,11 +18,16 @@ function NewScale() {
     setFormData({ ...formData, [name]: value });
   };
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
+    // Handle form submission here 
     console.log(formData);
+
+    // Redirect to another page
+    window.location.href = '/eccentricity-test';
   };
+
 
   return (
     <div className="bg-gray-300 min-h-screen">
@@ -56,9 +60,7 @@ function NewScale() {
             <input type="text" id="certificateNumber" name="certificateNumber" value={formData.certificateNumber} onChange={handleChange} className="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:border-blue-300" />
           </div>
           <div className="col-span-2 flex justify-end">
-            <Link to="/eccentricity-test">
               <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Next</button>
-            </Link>
           </div>
         </form>
       </div>
