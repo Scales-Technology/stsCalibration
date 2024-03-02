@@ -7,8 +7,8 @@ function NewClient() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    // Redirect to another page
+
+    console.log('NewClient'); e.target.
     window.location.href = '/new-scale';
   };
 
