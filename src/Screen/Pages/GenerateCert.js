@@ -27,16 +27,6 @@ function GenerateCertificate() {
         return newDate.toLocaleDateString();
     };
 
-    // const handleDownload = () => {
-    //     const input = document.getElementById('certificate');
-    //     html2canvas(input)
-    //         .then((canvas) => {
-    //             const imgData = canvas.toDataURL('image/png');
-    //             const pdf = new jsPDF('portrait', 'mm', 'a4');
-    //             pdf.addImage(imgData, 'PNG', 0, 0, 210, 297); 
-    //             pdf.save('certificate.pdf');
-    //         });
-    // };
     const handleDownload = () => {
         const input = document.getElementById('certificate');
         const pdfWidth = 210; 
@@ -59,7 +49,6 @@ function GenerateCertificate() {
             <Navbar />
             <div className="flex-grow p-32">
                 <button onClick={handleDownload} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Download Certificate</button>
-                {/* <div id="certificate" className="max-w-md mx-auto h-full border p-8 text-sm leading-normal"> */}
                 <div id="certificate" className="max-w-md mx-auto h-full border p-8 text-sm leading-normal">
 
                     <div className="flex justify-center items-center">
